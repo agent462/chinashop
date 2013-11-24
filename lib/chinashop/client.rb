@@ -1,6 +1,7 @@
 require 'chinashop/config'
 require 'chinashop/api'
 require 'chinashop/account'
+require 'chinashop/ticker'
 
 module ChinaShop
   class Client
@@ -36,7 +37,7 @@ module ChinaShop
     end
 
     def ticker
-      get('https://vip.btcchina.com/bc/ticker')
+      Ticker.new(get('https://vip.btcchina.com/bc/ticker'))
     end
 
     def order_book
