@@ -2,6 +2,7 @@ The start of a btcchina library.  The btcchina api is currently very basic so do
 
 Usage
 --------
+````
 require 'chinashop'
 
 ChinaShop.configure do |config|
@@ -9,4 +10,5 @@ ChinaShop.configure do |config|
   config.secret = 'your-secret-here'
 end
 
-puts ChinaShop.ticker
+puts ChinaShop.ticker.high
+````
