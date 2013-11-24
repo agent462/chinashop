@@ -11,4 +11,5 @@ ChinaShop.configure do |config|
 end
 
 puts ChinaShop.ticker.high
+puts ChinaShop.account.balance.btc
 ````
