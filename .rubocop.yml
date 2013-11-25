@@ -1,0 +1,20 @@
+LineLength:
+  Max: 160
+
+Encoding:
+  Enabled: false
+
+HashSyntax:
+  Enabled: false
+
+MethodLength:
+  Max: 30
+
+Documentation:
+  Enabled: false
+
+NumericLiterals:
+  Enabled: false
+
+BlockNesting:
+  Max: 4
