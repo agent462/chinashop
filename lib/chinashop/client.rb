@@ -2,6 +2,7 @@ require 'chinashop/config'
 require 'chinashop/api'
 require 'chinashop/account'
 require 'chinashop/ticker'
+require 'chinashop/market_depth'
 
 module ChinaShop
   class Client
@@ -17,7 +18,7 @@ module ChinaShop
     end
 
     def market_depth
-      post(:method => 'getMarketDepth2')
+      MarketDepth.new(post(:method => 'getMarketDepth2'))
     end
 
     def buy
