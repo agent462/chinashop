@@ -2,6 +2,7 @@ require 'chinashop/config'
 require 'chinashop/api'
 require 'chinashop/account'
 require 'chinashop/ticker'
+require 'chinashop/orders'
 require 'chinashop/market_depth'
 
 module ChinaShop
@@ -14,18 +15,18 @@ module ChinaShop
     end
 
     def orders
-      post(:method => 'getOrders')
+      Orders.new(post(:method => 'getOrders'))
     end
 
     def market_depth
       MarketDepth.new(post(:method => 'getMarketDepth2'))
     end
 
-    def buy
+    def buy(price, amount)
       post(:method => 'buyOrder', :params => [price, amount])
     end
 
-    def sell
+    def sell(price, amount)
       post(:method => 'sellOrder', :params => [price, amount])
     end
 
