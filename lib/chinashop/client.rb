@@ -37,16 +37,15 @@ module ChinaShop
     end
 
     def ticker
-      Ticker.new(get('https://vip.btcchina.com/bc/ticker'))
+      Ticker.new(get('https://data.btcchina.com/data/ticker'))
     end
 
     def order_book
-      get('https://vip.btcchina.com/bc/orderbook')
+      get('https://data.btcchina.com/data/orderbook')
     end
 
     def trades
-      get('https://vip.btcchina.com/bc/trades')
+      get('https://data.btcchina.com/data/trades')
     end
-
   end
 end
