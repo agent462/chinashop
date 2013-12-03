@@ -33,7 +33,8 @@ Returns the ticker information.  Accessed via `ChinaShop.ticker`. The following 
 * `buy`
 * `sell`
 * `last`
-* `vol`
+* `vol`    
+
 ````
 ChinaShop.ticker.high
 ````
@@ -46,6 +47,7 @@ Returns the user account information.  Configuration is required.  Accessed via 
 * `balance`
 * `frozen`
 * `deposit_address`
+
 ````
 ChinaShop.account.balance.btc
 ````
@@ -55,6 +57,7 @@ Returns the Market Depth os the btcchina exchange.  Accessed via `ChinaShop.mark
 
 * `bids`
 * `asks`
+
 ````
 ChinaShop.market_depth.bids
 ````
