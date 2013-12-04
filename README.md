@@ -94,6 +94,23 @@ Lists all the open orders.  Accessed via `ChinaShop.orders`. The following metho
 puts ChinaShop.orders.all
 ````
 
+# Order
+
+Get a single order.  Accessed via `ChinaShop.order`. The following methods are available:
+* `all`
+* `id`
+* `type`
+* `price`
+* `currency`
+* `amount`
+* `amount_original`
+* `date`
+* `status`
+
+````ruby
+puts ChinaShop.order(823841).status
+````
+
 # Transactions
 
 Lists recent transactions.  Accessed via `ChinaShop.transactions`. The following methods are available:
