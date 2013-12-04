@@ -5,6 +5,7 @@ require 'chinashop/ticker'
 require 'chinashop/orders'
 require 'chinashop/buy'
 require 'chinashop/sell'
+require 'chinashop/transactions'
 require 'chinashop/market_depth'
 
 module ChinaShop
@@ -33,7 +34,7 @@ module ChinaShop
     end
 
     def transactions
-      post(:method => 'getTransactions')
+      Transactions.new(post(:method => 'getTransactions'))
     end
 
     def deposits

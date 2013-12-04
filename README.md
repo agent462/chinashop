@@ -54,7 +54,7 @@ puts ChinaShop.account.balance.btc
 ````
 # Market Depth
 
-Returns the Market Depth of the btcchina exchange.  Accessed via `ChinaShop.market_depth`. The following methods are available:
+Returns the Market Depth.  Accessed via `ChinaShop.market_depth`. The following methods are available:
 * `all`
 * `bids`
 * `asks`
@@ -85,6 +85,24 @@ Places a Ask order for the btcchina exchange.  Accessed via `ChinaShop.sell`. Th
 ````ruby
 s = ChinaShop.sell(:price => 6030, :amount => 0.009)
 puts s.id
+````
+
+# Orders
+
+Lists all the open orders.  Accessed via `ChinaShop.orders`. The following methods are available:
+* `all`
+
+````ruby
+puts ChinaShop.orders.all
+````
+
+# Transactions
+
+Lists recent transactions.  Accessed via `ChinaShop.transactions`. The following methods are available:
+* `all`
+
+````ruby
+puts ChinaShop.transactions.all
 ````
 
 License and Author
