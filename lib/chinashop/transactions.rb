@@ -1,6 +1,6 @@
 module ChinaShop
   class Transactions
-    attr_accessor :all, :buys, :sells, :last
+    attr_accessor :all
 
     def initialize(trans = {})
       self.all = trans['result']['transaction']

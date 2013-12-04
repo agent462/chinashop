@@ -105,6 +105,23 @@ Lists recent transactions.  Accessed via `ChinaShop.transactions`. The following
 puts ChinaShop.transactions.all
 ````
 
+# Trades
+
+Returns recent trades.  Accessed via `ChinaShop.trades`.
+
+````ruby
+puts ChinaShop.trades
+````
+
+# Order Book
+
+Returns the current order book.  Accessed via `ChinaShop.order_book`.
+
+````ruby
+puts ChinaShop.order_book
+````
+
+
 License and Author
 ==================
 Author:: Bryan Brandau <agent462@gmail.com>
