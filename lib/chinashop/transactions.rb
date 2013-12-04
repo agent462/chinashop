@@ -1,9 +1,9 @@
 module ChinaShop
   class Transactions
-    attr_accessor :transactions, :buys, :sells, :last
+    attr_accessor :all, :buys, :sells, :last
 
     def initialize(trans = {})
-      transactions = trans['result']['transaction']
+      self.all = trans['result']['transaction']
     end
 
   end

@@ -1,9 +1,9 @@
 module ChinaShop
   class Ticker
-    attr_accessor :ticker, :high, :low, :buy, :sell, :last, :vol
+    attr_accessor :all, :high, :low, :buy, :sell, :last, :vol
 
     def initialize(ticker = {})
-      self.ticker = ticker['ticker']
+      self.all    = ticker['ticker']
       self.high   = ticker['ticker']['high']
       self.low    = ticker['ticker']['low']
       self.buy    = ticker['ticker']['buy']

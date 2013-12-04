@@ -28,6 +28,7 @@ end
 
 Returns the ticker information.  Accessed via `ChinaShop.ticker`. The following methods are available:
 
+* `all`
 * `high`
 * `low`
 * `buy`
@@ -42,8 +43,8 @@ ChinaShop.ticker.high
 # Account
 
 Returns the user account information.  Configuration is required.  Accessed via `ChinaShop.account`. The following methods are available:
+* `all`
 * `username`
-* `account`
 * `balance`
 * `frozen`
 * `deposit_address`
@@ -53,13 +54,35 @@ ChinaShop.account.balance.btc
 ````
 # Market Depth
 
-Returns the Market Depth os the btcchina exchange.  Accessed via `ChinaShop.market_depth`. The following methods are available:
-
+Returns the Market Depth of the btcchina exchange.  Accessed via `ChinaShop.market_depth`. The following methods are available:
+* `all`
 * `bids`
 * `asks`
 
 ````
 ChinaShop.market_depth.bids
+````
+
+# Buy
+
+Places a Bid order for the btcchina exchange.  Accessed via `ChinaShop.buy`. The following methods are available:
+* `all`
+* `id`
+* `result`
+
+````
+ChinaShop.buy(:price => 6030, :amount => 0.009)
+````
+
+# Sell
+
+Places a Ask order for the btcchina exchange.  Accessed via `ChinaShop.sell`. The following methods are available:
+* `all`
+* `id`
+* `result`
+
+````
+ChinaShop.sell(:price => 6030, :amount => 0.009)
 ````
 
 License and Author

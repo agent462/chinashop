@@ -1,9 +1,9 @@
 module ChinaShop
   class Orders
-    attr_accessor :orders
+    attr_accessor :all
 
     def initialize(orders = {})
-      orders = orders['result']
+      self.all = orders['result']['order']
     end
 
   end
