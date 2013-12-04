@@ -14,9 +14,10 @@ module ChinaShop
 
     def post(opts = {})
       method = opts[:method]
-      params = opts[:params]
+      params = opts[:params] || []
       tonce = (Time.now.to_f * 1000000).to_i
       query_string = "tonce=#{tonce}&accesskey=#{key}&requestmethod=post&id=#{tonce}&method=#{method}&params=#{params.join(',')}"
+      puts query_string
       hash = OpenSSL::HMAC.hexdigest('sha1', secret, query_string)
       auth = Base64.encode64("#{key}:#{hash}").gsub("\n", '')
       uri = URI.parse(api_uri)
@@ -30,7 +31,7 @@ module ChinaShop
                   'Json-Rpc-Tonce' => "#{tonce}"
                 }
       req = Net::HTTP::Post.new(api_uri, initheader = headers)
-      req.body = JSON.generate('method' => method, 'params' => params || [], 'id' => tonce)
+      req.body = JSON.generate('method' => method, 'params' => params, 'id' => tonce)
       JSON.parse(http.request(req).body)
     end
 
