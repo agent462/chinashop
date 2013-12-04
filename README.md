@@ -2,7 +2,7 @@ The start of a btcchina library.  The btcchina api is currently very basic so do
 
 Usage
 --------
-````
+````ruby
 require 'chinashop'
 
 ChinaShop.configure do |config|
@@ -17,7 +17,7 @@ puts ChinaShop.account.balance.btc
 # Configuration
 Apply a key and secret to use the account and trading features.
 
-````
+````ruby
 ChinaShop.configure do |config|
   config.key = 'your-key-here'
   config.secret = 'your-secret-here'
@@ -36,8 +36,8 @@ Returns the ticker information.  Accessed via `ChinaShop.ticker`. The following 
 * `last`
 * `vol`    
 
-````
-ChinaShop.ticker.high
+````ruby
+puts ChinaShop.ticker.high
 ````
 
 # Account
@@ -49,8 +49,8 @@ Returns the user account information.  Configuration is required.  Accessed via 
 * `frozen`
 * `deposit_address`
 
-````
-ChinaShop.account.balance.btc
+````ruby
+puts ChinaShop.account.balance.btc
 ````
 # Market Depth
 
@@ -59,7 +59,7 @@ Returns the Market Depth of the btcchina exchange.  Accessed via `ChinaShop.mark
 * `bids`
 * `asks`
 
-````
+````ruby
 ChinaShop.market_depth.bids
 ````
 
@@ -70,8 +70,9 @@ Places a Bid order for the btcchina exchange.  Accessed via `ChinaShop.buy`. The
 * `id`
 * `result`
 
-````
-ChinaShop.buy(:price => 6030, :amount => 0.009)
+````ruby
+b = ChinaShop.buy(:price => 6030, :amount => 0.009)
+puts b.result
 ````
 
 # Sell
@@ -81,8 +82,9 @@ Places a Ask order for the btcchina exchange.  Accessed via `ChinaShop.sell`. Th
 * `id`
 * `result`
 
-````
-ChinaShop.sell(:price => 6030, :amount => 0.009)
+````ruby
+s = ChinaShop.sell(:price => 6030, :amount => 0.009)
+puts s.id
 ````
 
 License and Author
