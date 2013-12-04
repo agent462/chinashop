@@ -16,7 +16,7 @@ module ChinaShop
       method = opts[:method]
       params = opts[:params]
       tonce = (Time.now.to_f * 1000000).to_i
-      query_string = "tonce=#{tonce}&accesskey=#{key}&requestmethod=post&id=#{tonce}&method=#{method}&params=#{params}"
+      query_string = "tonce=#{tonce}&accesskey=#{key}&requestmethod=post&id=#{tonce}&method=#{method}&params=#{params.join(',')}"
       hash = OpenSSL::HMAC.hexdigest('sha1', secret, query_string)
       auth = Base64.encode64("#{key}:#{hash}").gsub("\n", '')
       uri = URI.parse(api_uri)
