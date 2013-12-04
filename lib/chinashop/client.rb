@@ -3,6 +3,8 @@ require 'chinashop/api'
 require 'chinashop/account'
 require 'chinashop/ticker'
 require 'chinashop/orders'
+require 'chinashop/buy'
+require 'chinashop/sell'
 require 'chinashop/market_depth'
 
 module ChinaShop
@@ -22,12 +24,12 @@ module ChinaShop
       MarketDepth.new(post(:method => 'getMarketDepth2'))
     end
 
-    def buy(price, amount)
-      post(:method => 'buyOrder', :params => [price, amount])
+    def buy(h = {})
+      Buy.new(post(:method => 'buyOrder', :params => ["#{h[:price].to_f.round(5)}", "#{h[:amount].to_f.round(8)}"]))
     end
 
-    def sell(price, amount)
-      post(:method => 'sellOrder', :params => [price, amount])
+    def sell(h = {})
+      Sell.new(post(:method => 'sellOrder', :params => ["#{h[:price].to_f.round(5)}", "#{h[:amount].to_f.round(8)}"]))
     end
 
     def transactions
