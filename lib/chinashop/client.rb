@@ -3,6 +3,7 @@ require 'chinashop/api'
 require 'chinashop/account'
 require 'chinashop/ticker'
 require 'chinashop/orders'
+require 'chinashop/order'
 require 'chinashop/cancel_order'
 require 'chinashop/buy'
 require 'chinashop/sell'
@@ -21,6 +22,10 @@ module ChinaShop
 
     def orders
       Orders.new(post(:method => 'getOrders'))
+    end
+
+    def order(id)
+      Order.new(post(:method => 'getOrder', :params => [id]))
     end
 
     def market_depth
