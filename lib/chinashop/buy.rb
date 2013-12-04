@@ -1,10 +1,9 @@
 module ChinaShop
   class Buy
-    attr_accessor :all, :id, :result
+    attr_accessor :all, :result
 
     def initialize(buy = {})
       self.all    = buy
-      self.id     = buy['id']
       self.result = buy['result']
     end
 

@@ -67,7 +67,6 @@ ChinaShop.market_depth.bids
 
 Places a Bid order for the btcchina exchange.  Accessed via `ChinaShop.buy`. The following methods are available:
 * `all`
-* `id`
 * `result`
 
 ````ruby
@@ -79,12 +78,11 @@ puts b.result
 
 Places a Ask order for the btcchina exchange.  Accessed via `ChinaShop.sell`. The following methods are available:
 * `all`
-* `id`
 * `result`
 
 ````ruby
 s = ChinaShop.sell(:price => 6030, :amount => 0.009)
-puts s.id
+puts s.result
 ````
 
 # Orders
@@ -103,6 +101,15 @@ Lists recent transactions.  Accessed via `ChinaShop.transactions`. The following
 
 ````ruby
 puts ChinaShop.transactions.all
+````
+
+# Deposits
+
+Lists recent deposits.  Accessed via `ChinaShop.deposits`. The following methods are available:
+* `all`
+
+````ruby
+puts ChinaShop.deposits.all
 ````
 
 # Trades
