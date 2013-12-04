@@ -3,6 +3,7 @@ require 'chinashop/api'
 require 'chinashop/account'
 require 'chinashop/ticker'
 require 'chinashop/orders'
+require 'chinashop/cancel_order'
 require 'chinashop/buy'
 require 'chinashop/sell'
 require 'chinashop/deposits'
@@ -32,6 +33,10 @@ module ChinaShop
 
     def sell(h = {})
       Sell.new(post(:method => 'sellOrder', :params => ["#{h[:price].to_f.round(5)}", "#{h[:amount].to_f.round(8)}"]))
+    end
+
+    def cancel_order(id)
+      CancelOrder.new(post(:method => 'cancelOrder', :params => [id]))
     end
 
     def transactions
