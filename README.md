@@ -14,7 +14,7 @@ puts ChinaShop.ticker.high
 puts ChinaShop.account.balance.btc
 ````
 
-# Configuration
+## Configuration
 Apply a key and secret to use the account and trading features.
 
 ````ruby
@@ -24,7 +24,7 @@ ChinaShop.configure do |config|
 end
 ````
 
-# Ticker
+## Ticker
 
 Returns the ticker information.  Accessed via `ChinaShop.ticker`. The following methods are available:
 
@@ -40,7 +40,7 @@ Returns the ticker information.  Accessed via `ChinaShop.ticker`. The following 
 puts ChinaShop.ticker.high
 ````
 
-# Account
+## Account
 
 Returns the user account information.  Configuration is required.  Accessed via `ChinaShop.account`. The following methods are available:
 * `all`
@@ -52,7 +52,7 @@ Returns the user account information.  Configuration is required.  Accessed via 
 ````ruby
 puts ChinaShop.account.balance.btc
 ````
-# Market Depth
+## Market Depth
 
 Returns the Market Depth.  Accessed via `ChinaShop.market_depth`. The following methods are available:
 * `all`
@@ -63,7 +63,7 @@ Returns the Market Depth.  Accessed via `ChinaShop.market_depth`. The following 
 ChinaShop.market_depth.bids
 ````
 
-# Buy
+## Buy
 
 Places a Bid order for the btcchina exchange.  Accessed via `ChinaShop.buy`. The following methods are available:
 * `all`
@@ -74,7 +74,7 @@ b = ChinaShop.buy(:price => 6030, :amount => 0.009)
 puts b.result
 ````
 
-# Sell
+## Sell
 
 Places a Ask order for the btcchina exchange.  Accessed via `ChinaShop.sell`. The following methods are available:
 * `all`
@@ -85,7 +85,7 @@ s = ChinaShop.sell(:price => 6030, :amount => 0.009)
 puts s.result
 ````
 
-# Orders
+## Orders
 
 Lists all the open orders.  Accessed via `ChinaShop.orders`. The following methods are available:
 * `all`
@@ -94,7 +94,7 @@ Lists all the open orders.  Accessed via `ChinaShop.orders`. The following metho
 puts ChinaShop.orders.all
 ````
 
-# Order
+## Order
 
 Get a single order.  Accessed via `ChinaShop.order`. The following methods are available:
 * `all`
@@ -111,7 +111,7 @@ Get a single order.  Accessed via `ChinaShop.order`. The following methods are a
 puts ChinaShop.order(823841).status
 ````
 
-# Transactions
+## Transactions
 
 Lists recent transactions.  Accessed via `ChinaShop.transactions`. The following methods are available:
 * `all`
@@ -120,7 +120,7 @@ Lists recent transactions.  Accessed via `ChinaShop.transactions`. The following
 puts ChinaShop.transactions.all
 ````
 
-# Deposits
+## Deposits
 
 Lists recent deposits.  Accessed via `ChinaShop.deposits`. The following methods are available:
 * `all`
@@ -129,7 +129,7 @@ Lists recent deposits.  Accessed via `ChinaShop.deposits`. The following methods
 puts ChinaShop.deposits.all
 ````
 
-# Trades
+## Trades
 
 Returns recent trades.  Accessed via `ChinaShop.trades`.
 
@@ -137,7 +137,7 @@ Returns recent trades.  Accessed via `ChinaShop.trades`.
 puts ChinaShop.trades
 ````
 
-# Order Book
+## Order Book
 
 Returns the current order book.  Accessed via `ChinaShop.order_book`.
 
