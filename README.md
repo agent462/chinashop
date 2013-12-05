@@ -1,5 +1,7 @@
 The start of a btcchina library.  The btcchina api is currently very basic so don't expect any magic.
 
+If you are feeling generous, throw me some btc: 13rhHcFx8AWej5F1VYAudHc1SupJMTJKZU
+
 Usage
 --------
 ````ruby
@@ -144,7 +146,6 @@ Returns the current order book.  Accessed via `ChinaShop.order_book`.
 ````ruby
 puts ChinaShop.order_book
 ````
-
 
 License and Author
 ==================
