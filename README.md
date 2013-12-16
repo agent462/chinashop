@@ -137,7 +137,6 @@ Returns the last 24 hours of trades.  Accessed via `ChinaShop.trades`. Please be
 
 ````ruby
 puts ChinaShop.trades
-puts ChinaShop.trades(50000)
 ````
 
 ## Trade History
