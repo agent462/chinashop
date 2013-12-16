@@ -133,10 +133,20 @@ puts ChinaShop.deposits.all
 
 ## Trades
 
-Returns recent trades.  Accessed via `ChinaShop.trades`.
+Returns the last 24 hours of trades.  Accessed via `ChinaShop.trades`.
 
 ````ruby
 puts ChinaShop.trades
+puts ChinaShop.trades(50000)
+````
+
+## Trade History
+
+Passing in no value will return the last 100 trades.  Passing in a trade id will return 100 trades starting from that id. Accessed via `ChinaShop.trade_history`.
+
+````ruby
+puts ChinaShop.trade_history
+puts ChinaShop.trade_history(50000)
 ````
 
 ## Order Book

@@ -63,5 +63,14 @@ module ChinaShop
     def trades
       get('https://data.btcchina.com/data/trades')
     end
+
+    def trade_history(since = nil)
+      if since.nil?
+        get('https://data.btcchina.com/data/historydata')
+      else
+        get("https://data.btcchina.com/data/historydata?since=#{since}")
+      end
+    end
+
   end
 end
